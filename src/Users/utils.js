@@ -1,0 +1,11 @@
+export const getUsers=async()=>{
+    const baseUrl=process.env.REACT_APP_BASE_URL
+    try{
+        const response=await fetch(`${baseUrl}/users`)
+        return response.json()
+    }
+    catch{
+        throw new Error (error.message)
+    }
+        
+}
